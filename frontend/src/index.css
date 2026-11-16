@@ -1,40 +1,50 @@
 
+@import "./styles/fonts.css";
 @import "tailwindcss";
+@import "./styles/tokens.css";
 
 /* =========================================
-   JingCraft AI — Design Tokens
-   Premium Chinese Museum + Modern AI
+   JingCraft AI — Typography System
 ========================================= */
 
-:root {
-  /* Brand Colors */
-  --color-porcelain: #F5F2E9;
-  --color-imperial-blue: #193C67;
-  --color-jade: #66877A;
-  --color-antique-gold: #B69A62;
-
-  /* Neutral Colors */
-  --color-white: #FFFFFF;
-  --color-ink: #202A35;
-  --color-muted: #747B84;
-  --color-border: #E5E0D5;
-
-  /* Typography */
-  --font-sans: "Inter", "Noto Sans SC", sans-serif;
+@theme {
+  --font-sans: "Inter Variable", "Noto Sans SC", sans-serif;
   --font-chinese: "Noto Sans SC", sans-serif;
+}
+
+:root {
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --font-chinese: "Noto Sans SC", sans-serif;
+
+  /* Typography Scale */
+  --text-display: clamp(3rem, 7vw, 6rem);
+  --text-heading-1: clamp(2.25rem, 5vw, 4rem);
+  --text-heading-2: clamp(1.875rem, 4vw, 3rem);
+  --text-heading-3: clamp(1.5rem, 3vw, 2.25rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+
+  /* Line Heights */
+  --leading-heading: 1.15;
+  --leading-body: 1.7;
 
   /* Layout */
   --container-width: 1280px;
 
-  font-family: var(--font-sans);
-  color: var(--color-ink);
-  background: var(--color-porcelain);
+  font-family: var(--font-body);
+  color: var(--color-foreground);
+  background: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* =========================================
+   Global Reset
+========================================= */
 
 * {
   box-sizing: border-box;
@@ -48,7 +58,11 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: var(--color-porcelain);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-foreground);
+  background: var(--color-background);
 }
 
 button,
@@ -77,7 +91,11 @@ img {
   width: 100%;
 }
 
+.font-chinese {
+  font-family: var(--font-chinese);
+}
+
 ::selection {
   color: var(--color-white);
-  background: var(--color-imperial-blue);
+  background: var(--color-primary);
 }
