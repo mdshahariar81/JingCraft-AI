@@ -3,6 +3,7 @@ import ColorPalette from '../../components/ui/ColorPalette'
 import Button from '../../components/ui/Button'
 import Input from '../../components/ui/Input'
 import Select from '../../components/ui/Select'
+import Checkbox from '../../components/ui/Checkbox'
 import {
   ArrowRight,
   Sparkles,
@@ -239,7 +240,6 @@ function DesignSystemPage() {
 
         {/* Basic select examples */}
         <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-white p-6 md:grid-cols-2">
-
           <Select
             label="Chinese Dynasty"
             placeholder="Choose a dynasty"
@@ -300,7 +300,6 @@ function DesignSystemPage() {
           </h3>
 
           <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-white p-6 md:grid-cols-2">
-
             <Select
               label="Default State"
               placeholder="Select an option"
@@ -352,6 +351,118 @@ function DesignSystemPage() {
             Test dropdown opening, searchable options, disabled options,
             keyboard navigation, Escape to close, and clear selection.
             The component supports both controlled and uncontrolled usage.
+          </p>
+        </div>
+      </section>
+
+      {/* Reusable checkbox component preview */}
+      <section className="mx-auto mt-20 max-w-7xl space-y-8">
+
+        <div>
+          <h2 className="text-2xl font-semibold text-primary sm:text-3xl">
+            Checkbox Components
+          </h2>
+
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-muted">
+            Accessible checkbox controls for preferences, filters,
+            and multi-selection forms.
+          </p>
+        </div>
+
+        {/* Basic checkbox examples */}
+        <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-white p-6 md:grid-cols-2">
+
+          <div className="space-y-5">
+            <h3 className="text-lg font-semibold text-foreground">
+              Basic States
+            </h3>
+
+            <Checkbox
+              label="Unchecked Checkbox"
+            />
+
+            <Checkbox
+              label="Checked Checkbox"
+              defaultChecked
+            />
+
+            <Checkbox
+              label="Disabled Checkbox"
+              disabled
+            />
+
+            <Checkbox
+              label="Disabled Checked Checkbox"
+              defaultChecked
+              disabled
+            />
+          </div>
+
+          <div className="space-y-5">
+            <h3 className="text-lg font-semibold text-foreground">
+              Helper and Validation
+            </h3>
+
+            <Checkbox
+              label="Accept Terms and Conditions"
+              helperText="You must accept the terms before continuing."
+            />
+
+            <Checkbox
+              label="Verified Preference"
+              defaultChecked
+              success="Your preference has been saved."
+            />
+
+            <Checkbox
+              label="Required Agreement"
+              error="Please accept this agreement to continue."
+            />
+          </div>
+        </div>
+
+        {/* Multiple checkbox selection */}
+        <div className="space-y-4">
+          <h3 className="text-lg font-semibold text-foreground">
+            Ceramic Interest Filters
+          </h3>
+
+          <div className="rounded-xl border border-border bg-white p-6">
+            <p className="mb-5 text-sm text-text-muted">
+              Select the ceramic topics you want to explore.
+            </p>
+
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <Checkbox
+                label="Blue and White Porcelain"
+                defaultChecked
+              />
+
+              <Checkbox
+                label="Chinese Celadon"
+              />
+
+              <Checkbox
+                label="Traditional Ceramic Motifs"
+              />
+
+              <Checkbox
+                label="Imperial Ceramics"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Checkbox interaction instructions */}
+        <div className="rounded-xl border border-border bg-white p-5">
+          <h3 className="font-semibold text-foreground">
+            Checkbox Interaction
+          </h3>
+
+          <p className="mt-2 text-sm leading-relaxed text-text-muted">
+            Test checked and unchecked states, keyboard interaction
+            using Tab and Space, disabled controls, and validation
+            messages. Checkboxes support controlled and uncontrolled usage.
           </p>
         </div>
       </section>
