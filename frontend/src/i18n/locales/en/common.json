@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "name": "JingCraft AI",
+    "tagline": "Where Heritage Meets Innovation"
+  },
+  "navigation": {
+    "home": "Home",
+    "museum": "Virtual Museum",
+    "designStudio": "AI Design Studio",
+    "heritage": "Cultural Heritage",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "actions": {
+    "exploreMuseum": "Explore Museum",
+    "enterStudio": "Enter Design Studio",
+    "learnMore": "Learn More"
+  },
+  "language": {
+    "english": "English",
+    "chinese": "中文"
+  }
+}

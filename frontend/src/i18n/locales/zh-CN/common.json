@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "name": "JingCraft AI",
+    "tagline": "让传统与创新相遇"
+  },
+  "navigation": {
+    "home": "首页",
+    "museum": "虚拟博物馆",
+    "designStudio": "AI 设计工作室",
+    "heritage": "中国文化遗产",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "actions": {
+    "exploreMuseum": "探索博物馆",
+    "enterStudio": "进入设计工作室",
+    "learnMore": "了解更多"
+  },
+  "language": {
+    "english": "English",
+    "chinese": "中文"
+  }
+}
