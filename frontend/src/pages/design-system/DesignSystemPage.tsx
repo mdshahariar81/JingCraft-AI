@@ -1,7 +1,14 @@
 
 import ColorPalette from '../../components/ui/ColorPalette'
 import Button from '../../components/ui/Button'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import Input from '../../components/ui/Input'
+import {
+  ArrowRight,
+  Sparkles,
+  Mail,
+  LockKeyhole,
+  Search,
+} from 'lucide-react'
 
 // Development-only page for reviewing and testing the design system.
 // This page will not be included in the public website navigation.
@@ -146,6 +153,102 @@ function DesignSystemPage() {
             Hover over the buttons to test the subtle lift animation.
             Press a button to test its tap interaction. Disabled and
             loading buttons should not animate.
+          </p>
+        </div>
+      </section>
+
+      {/* Reusable input component preview */}
+      <section className="mx-auto mt-20 max-w-7xl space-y-8">
+
+        {/* Input section heading */}
+        <div>
+          <h2 className="text-2xl font-semibold text-primary sm:text-3xl">
+            Input Components
+          </h2>
+
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-muted">
+            Accessible form inputs with consistent styling,
+            focus interactions, helper messages, and validation states.
+          </p>
+        </div>
+
+        {/* Basic input examples */}
+        <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-white p-6 md:grid-cols-2">
+
+          <Input
+            label="Full Name"
+            placeholder="Enter your full name"
+            helperText="Please enter your first and last name."
+          />
+
+          <Input
+            label="Email Address"
+            type="email"
+            placeholder="name@example.com"
+            leftIcon={<Mail size={18} />}
+            helperText="We will use this email for account communication."
+          />
+
+          <Input
+            label="Search Museum"
+            placeholder="Search ceramic collections..."
+            leftIcon={<Search size={18} />}
+          />
+
+          <Input
+            label="Password"
+            type="password"
+            placeholder="Enter your password"
+            leftIcon={<LockKeyhole size={18} />}
+            helperText="Click the eye icon to show or hide your password."
+          />
+        </div>
+
+        {/* Input validation states */}
+        <div className="space-y-4">
+          <h3 className="text-lg font-semibold text-foreground">
+            Validation States
+          </h3>
+
+          <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-white p-6 md:grid-cols-2">
+
+            <Input
+              label="Default State"
+              placeholder="Enter your information"
+            />
+
+            <Input
+              label="Success State"
+              defaultValue="shahariar@example.com"
+              type="email"
+              success="Email address looks good."
+            />
+
+            <Input
+              label="Error State"
+              defaultValue="invalid-email"
+              type="email"
+              error="Please enter a valid email address."
+            />
+
+            <Input
+              label="Disabled State"
+              defaultValue="This field is disabled"
+              disabled
+            />
+          </div>
+        </div>
+
+        {/* Input interaction testing instructions */}
+        <div className="rounded-xl border border-border bg-white p-5">
+          <h3 className="font-semibold text-foreground">
+            Input Interaction
+          </h3>
+
+          <p className="mt-2 text-sm leading-relaxed text-text-muted">
+            Test keyboard navigation, focus styling, password visibility,
+            and validation messages. Inputs use native HTML behavior
+            and support standard form attributes.
           </p>
         </div>
       </section>
