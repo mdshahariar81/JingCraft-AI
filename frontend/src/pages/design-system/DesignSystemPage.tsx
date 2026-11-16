@@ -2,6 +2,7 @@
 import ColorPalette from '../../components/ui/ColorPalette'
 import Button from '../../components/ui/Button'
 import Input from '../../components/ui/Input'
+import Select from '../../components/ui/Select'
 import {
   ArrowRight,
   Sparkles,
@@ -44,7 +45,6 @@ function DesignSystemPage() {
       {/* Reusable button component preview */}
       <section className="mx-auto mt-16 max-w-7xl space-y-8">
 
-        {/* Button section heading */}
         <div>
           <h2 className="text-2xl font-semibold text-primary sm:text-3xl">
             Button Components
@@ -63,21 +63,10 @@ function DesignSystemPage() {
           </h3>
 
           <div className="flex flex-wrap items-center gap-4 rounded-xl border border-border bg-white p-6">
-            <Button variant="primary">
-              Primary Button
-            </Button>
-
-            <Button variant="secondary">
-              Secondary Button
-            </Button>
-
-            <Button variant="outline">
-              Outline Button
-            </Button>
-
-            <Button variant="ghost">
-              Ghost Button
-            </Button>
+            <Button variant="primary">Primary Button</Button>
+            <Button variant="secondary">Secondary Button</Button>
+            <Button variant="outline">Outline Button</Button>
+            <Button variant="ghost">Ghost Button</Button>
           </div>
         </div>
 
@@ -88,17 +77,9 @@ function DesignSystemPage() {
           </h3>
 
           <div className="flex flex-wrap items-center gap-4 rounded-xl border border-border bg-white p-6">
-            <Button size="sm">
-              Small Button
-            </Button>
-
-            <Button size="md">
-              Medium Button
-            </Button>
-
-            <Button size="lg">
-              Large Button
-            </Button>
+            <Button size="sm">Small Button</Button>
+            <Button size="md">Medium Button</Button>
+            <Button size="lg">Large Button</Button>
           </div>
         </div>
 
@@ -109,17 +90,9 @@ function DesignSystemPage() {
           </h3>
 
           <div className="flex flex-wrap items-center gap-4 rounded-xl border border-border bg-white p-6">
-            <Button>
-              Normal State
-            </Button>
-
-            <Button loading>
-              Loading State
-            </Button>
-
-            <Button disabled>
-              Disabled State
-            </Button>
+            <Button>Normal State</Button>
+            <Button loading>Loading State</Button>
+            <Button disabled>Disabled State</Button>
           </div>
         </div>
 
@@ -160,7 +133,6 @@ function DesignSystemPage() {
       {/* Reusable input component preview */}
       <section className="mx-auto mt-20 max-w-7xl space-y-8">
 
-        {/* Input section heading */}
         <div>
           <h2 className="text-2xl font-semibold text-primary sm:text-3xl">
             Input Components
@@ -174,7 +146,6 @@ function DesignSystemPage() {
 
         {/* Basic input examples */}
         <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-white p-6 md:grid-cols-2">
-
           <Input
             label="Full Name"
             placeholder="Enter your full name"
@@ -211,7 +182,6 @@ function DesignSystemPage() {
           </h3>
 
           <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-white p-6 md:grid-cols-2">
-
             <Input
               label="Default State"
               placeholder="Enter your information"
@@ -249,6 +219,139 @@ function DesignSystemPage() {
             Test keyboard navigation, focus styling, password visibility,
             and validation messages. Inputs use native HTML behavior
             and support standard form attributes.
+          </p>
+        </div>
+      </section>
+
+      {/* Reusable select component preview */}
+      <section className="mx-auto mt-20 max-w-7xl space-y-8">
+
+        <div>
+          <h2 className="text-2xl font-semibold text-primary sm:text-3xl">
+            Select Components
+          </h2>
+
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-muted">
+            Custom dropdown components with searchable options,
+            keyboard navigation, and accessible validation states.
+          </p>
+        </div>
+
+        {/* Basic select examples */}
+        <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-white p-6 md:grid-cols-2">
+
+          <Select
+            label="Chinese Dynasty"
+            placeholder="Choose a dynasty"
+            options={[
+              { label: 'Tang Dynasty', value: 'tang' },
+              { label: 'Song Dynasty', value: 'song' },
+              { label: 'Yuan Dynasty', value: 'yuan' },
+              { label: 'Ming Dynasty', value: 'ming' },
+              { label: 'Qing Dynasty', value: 'qing' },
+            ]}
+            helperText="Select a historical period to explore."
+          />
+
+          <Select
+            label="Ceramic Category"
+            placeholder="Select ceramic category"
+            searchable
+            searchPlaceholder="Search categories..."
+            options={[
+              { label: 'Blue and White Porcelain', value: 'blue-white' },
+              { label: 'Celadon', value: 'celadon' },
+              { label: 'Famille Rose', value: 'famille-rose' },
+              { label: 'Doucai', value: 'doucai' },
+              { label: 'Jun Ware', value: 'jun-ware' },
+            ]}
+            helperText="Search and select a ceramic category."
+          />
+
+          <Select
+            label="Design Style"
+            placeholder="Choose a design style"
+            defaultValue="traditional"
+            options={[
+              { label: 'Traditional Chinese', value: 'traditional' },
+              { label: 'Minimalist', value: 'minimalist' },
+              { label: 'Contemporary', value: 'contemporary' },
+              { label: 'Experimental', value: 'experimental' },
+            ]}
+          />
+
+          <Select
+            label="Museum Collection"
+            placeholder="Choose a collection"
+            options={[
+              { label: 'Imperial Collection', value: 'imperial' },
+              { label: 'Royal Ceramics', value: 'royal' },
+              { label: 'Ancient Pottery', value: 'pottery', disabled: true },
+              { label: 'Contemporary Works', value: 'contemporary' },
+            ]}
+            helperText="Some collections are currently unavailable."
+          />
+        </div>
+
+        {/* Select validation states */}
+        <div className="space-y-4">
+          <h3 className="text-lg font-semibold text-foreground">
+            Validation States
+          </h3>
+
+          <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-white p-6 md:grid-cols-2">
+
+            <Select
+              label="Default State"
+              placeholder="Select an option"
+              options={[
+                { label: 'Option One', value: 'one' },
+                { label: 'Option Two', value: 'two' },
+              ]}
+            />
+
+            <Select
+              label="Success State"
+              defaultValue="verified"
+              options={[
+                { label: 'Verified', value: 'verified' },
+                { label: 'Pending', value: 'pending' },
+              ]}
+              success="Your selection has been verified."
+            />
+
+            <Select
+              label="Error State"
+              placeholder="Select a required option"
+              options={[
+                { label: 'Option One', value: 'one' },
+                { label: 'Option Two', value: 'two' },
+              ]}
+              error="Please select a valid option."
+            />
+
+            <Select
+              label="Disabled State"
+              placeholder="Selection unavailable"
+              disabled
+              options={[
+                { label: 'Option One', value: 'one' },
+                { label: 'Option Two', value: 'two' },
+              ]}
+            />
+          </div>
+        </div>
+
+        {/* Select interaction testing instructions */}
+        <div className="rounded-xl border border-border bg-white p-5">
+          <h3 className="font-semibold text-foreground">
+            Select Interaction
+          </h3>
+
+          <p className="mt-2 text-sm leading-relaxed text-text-muted">
+            Test dropdown opening, searchable options, disabled options,
+            keyboard navigation, Escape to close, and clear selection.
+            The component supports both controlled and uncontrolled usage.
           </p>
         </div>
       </section>
