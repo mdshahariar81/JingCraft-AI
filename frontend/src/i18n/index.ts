@@ -17,7 +17,11 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en',
+    lng:
+        typeof window !== 'undefined' &&
+        window.localStorage.getItem('jingcraft-language') === 'zh-CN'
+        ? 'zh-CN'
+        : 'en',
     fallbackLng: 'en',
     defaultNS: 'common',
     interpolation: {
