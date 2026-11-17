@@ -1,3 +1,4 @@
+
 {
   "brand": {
     "name": "JingCraft AI",
@@ -19,5 +20,115 @@
   "language": {
     "english": "English",
     "chinese": "中文"
+  },
+  "home": {
+    "eyebrow": "THE ART OF CHINESE CERAMICS",
+    "title": "Where Heritage Meets Innovation",
+    "description": "Discover the timeless beauty of Chinese ceramic heritage through AI-powered exploration, cultural storytelling, and immersive digital experiences.",
+    "explore": "Explore the Museum",
+    "create": "Enter Design Studio",
+    "visualLabel": "A LEGACY OF CRAFTSMANSHIP",
+    "visualCaption": "Inspired by centuries of porcelain artistry"
+  },
+  "featured": {
+    "eyebrow": "EXPLORE OUR HERITAGE",
+    "title": "A Legacy Crafted in Porcelain",
+    "description": "Discover the artistry, techniques, and cultural stories behind China's most celebrated ceramic traditions.",
+    "viewAll": "Explore the Museum",
+    "discover": "Discover Collection",
+    "items": {
+      "blueWhite": {
+        "name": "Blue and White Porcelain",
+        "chineseName": "青花瓷",
+        "period": "Ming & Qing Dynasties",
+        "description": "Elegant cobalt-blue designs painted on pure white porcelain, celebrated for their timeless beauty."
+      },
+      "celadon": {
+        "name": "Celadon",
+        "chineseName": "青瓷",
+        "period": "Song Dynasty",
+        "description": "Subtle jade-green glazes and refined forms that embody harmony and understated elegance."
+      },
+      "familleRose": {
+        "name": "Famille Rose",
+        "chineseName": "粉彩瓷",
+        "period": "Qing Dynasty",
+        "description": "Delicate enamel colors and intricate floral compositions showcasing exceptional craftsmanship."
+      }
+    }
+  },
+  "museumPreview": {
+    "eyebrow": "AN IMMERSIVE CULTURAL EXPERIENCE",
+    "title": "Step Into the World of Chinese Porcelain",
+    "description": "Explore the artistry of Chinese ceramics through an immersive digital museum experience. Discover traditional craftsmanship, historical heritage, and the timeless beauty of porcelain.",
+    "explore": "Explore Virtual Museum",
+    "artifactLabel": "3D ARTIFACT PREVIEW",
+    "artifactName": "Blue and White Porcelain",
+    "loading": "Preparing your 3D experience...",
+    "highlights": {
+      "history": {
+        "title": "A Journey Through History",
+        "description": "Discover the stories behind centuries of Chinese ceramic heritage."
+      },
+      "craftsmanship": {
+        "title": "Traditional Craftsmanship",
+        "description": "Explore the techniques and skills behind porcelain artistry."
+      },
+      "artistry": {
+        "title": "Timeless Artistic Beauty",
+        "description": "Experience the patterns, forms, and elegance of Chinese ceramics."
+      }
+    }
+  },
+  "designPreview": {
+    "eyebrow": "AI-POWERED CREATIVITY",
+    "title": "Tradition Inspires. Your Creativity Defines.",
+    "description": "Explore traditional Chinese ceramic patterns and discover new creative possibilities with AI-assisted design.",
+    "featureOne": "Explore traditional motifs",
+    "featureTwo": "Discover cultural inspiration",
+    "featureThree": "Create your own design direction",
+    "button": "Explore AI Design Studio",
+    "previewLabel": "DESIGN INSPIRATION",
+    "previewTitle": "A Fusion of Heritage & Creativity",
+    "previewCaption": "Inspired by traditional Chinese porcelain"
+  },
+  "heritageJourney": {
+    "eyebrow": "A JOURNEY THROUGH TIME",
+    "title": "Thousands of Years of Ceramic Excellence",
+    "description": "Discover how generations of Chinese artisans shaped one of the world's most celebrated ceramic traditions.",
+    "explore": "Explore Cultural Heritage",
+    "periods": {
+      "tang": {
+        "period": "618–907",
+        "name": "Tang Dynasty",
+        "title": "A World of Color",
+        "description": "Tang ceramics became known for diverse forms and vibrant sancai three-color glazed pottery."
+      },
+      "song": {
+        "period": "960–1279",
+        "name": "Song Dynasty",
+        "title": "The Beauty of Simplicity",
+        "description": "Refined forms and elegant monochrome glazes, including celebrated celadon traditions."
+      },
+      "ming": {
+        "period": "1368–1644",
+        "name": "Ming Dynasty",
+        "title": "The Rise of Blue and White",
+        "description": "Blue and white porcelain flourished, becoming one of China's most recognizable ceramic traditions."
+      },
+      "qing": {
+        "period": "1644–1912",
+        "name": "Qing Dynasty",
+        "title": "An Era of Colorful Artistry",
+        "description": "Famille rose and other sophisticated enamel decoration expanded the expressive possibilities of porcelain."
+      }
+    }
+  },
+  "finalCta": {
+    "eyebrow": "YOUR JOURNEY STARTS HERE",
+    "title": "Discover the Art of Chinese Ceramics",
+    "description": "Step into a world of timeless craftsmanship, explore cultural treasures, and create something inspired by centuries of tradition.",
+    "museumButton": "Explore Virtual Museum",
+    "studioButton": "Create with AI"
   }
 }
