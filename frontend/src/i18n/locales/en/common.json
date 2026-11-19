@@ -130,5 +130,111 @@
     "description": "Step into a world of timeless craftsmanship, explore cultural treasures, and create something inspired by centuries of tradition.",
     "museumButton": "Explore Virtual Museum",
     "studioButton": "Create with AI"
+  },
+  "museumPage": {
+    "eyebrow": "THE DIGITAL CERAMIC MUSEUM",
+    "title": "Discover the Legacy of Chinese Ceramics",
+    "description": "Explore centuries of ceramic artistry, historical treasures, and the craftsmanship that shaped Chinese porcelain.",
+    "exploreButton": "Explore Collections",
+    "heritageButton": "Discover Heritage",
+    "collectionLabel": "CURATED COLLECTIONS",
+    "artifactLabel": "A WORLD OF TIMELESS ART",
+    "galleryTitle": "Explore the Art of Chinese Ceramics",
+    "galleryDescription": "Discover the distinctive styles, colours, and craftsmanship of China's most celebrated ceramic traditions.",
+    "breadcrumbMuseum": "VIRTUAL MUSEUM",
+    "ceramicTraditions": "CERAMIC TRADITIONS",
+    "yearsOfHeritage": "YEARS OF HERITAGE",
+    "exploreLabel": "EXPLORE",
+    "ceramicArt": "Chinese Ceramic Art",
+    "collectionNumber": "COLLECTION",
+    "collections": {
+      "tang": {
+        "name": "Tang Sancai",
+        "chineseName": "唐三彩",
+        "period": "Tang Dynasty · 618–907",
+        "description": "Discover vibrant three-colour glazed ceramics that reflect the artistic diversity of the Tang Dynasty."
+      },
+      "celadon": {
+        "name": "Song Celadon",
+        "chineseName": "宋代青瓷",
+        "period": "Song Dynasty · 960–1279",
+        "description": "Experience the refined beauty of jade-like glazes and elegant forms from the Song Dynasty."
+      },
+      "blueWhite": {
+        "name": "Blue and White Porcelain",
+        "chineseName": "青花瓷",
+        "period": "Ming Dynasty · 1368–1644",
+        "description": "Explore iconic cobalt-blue decorations painted on white porcelain, celebrated around the world."
+      },
+      "familleRose": {
+        "name": "Famille Rose",
+        "chineseName": "粉彩瓷",
+        "period": "Qing Dynasty · 1644–1912",
+        "description": "Admire delicate enamel colours and intricate decorative designs from the Qing Dynasty."
+      }
+    },
+    "featuredArtifact": {
+      "eyebrow": "FEATURED ARTIFACT",
+      "title": "A Closer Look at Porcelain Art",
+      "description": "Discover the artistic details and cultural significance of traditional Chinese ceramic craftsmanship.",
+      "artifactName": "Blue and White Porcelain",
+      "period": "Ming Dynasty · 1368–1644",
+      "sectionLabel": "ARTISTIC DETAILS",
+      "featureOneTitle": "Cobalt Blue Decoration",
+      "featureOneDescription": "Elegant blue motifs painted against a white porcelain surface.",
+      "featureTwoTitle": "Traditional Craftsmanship",
+      "featureTwoDescription": "A refined ceramic tradition shaped by generations of skilled artisans.",
+      "featureThreeTitle": "Cultural Heritage",
+      "featureThreeDescription": "An iconic expression of Chinese ceramic artistry."
+    },
+    "craftsmanship": {
+      "eyebrow": "THE ART OF MAKING",
+      "title": "The Journey of Traditional Ceramic Craftsmanship",
+      "description": "Discover the traditional techniques and skilled processes behind the creation of Chinese ceramics.",
+      "steps": {
+        "shaping": {
+          "number": "01",
+          "title": "Clay Shaping",
+          "description": "Raw clay is carefully shaped into forms that provide the foundation for ceramic artistry."
+        },
+        "painting": {
+          "number": "02",
+          "title": "Hand Painting",
+          "description": "Artisans carefully paint traditional motifs and decorative patterns onto ceramic surfaces."
+        },
+        "glazing": {
+          "number": "03",
+          "title": "Glazing",
+          "description": "A glaze layer is applied to enhance the surface, colour, and finish of the ceramic piece."
+        },
+        "firing": {
+          "number": "04",
+          "title": "Kiln Firing",
+          "description": "The ceramic is fired in a kiln to develop its final strength, surface, and appearance."
+        }
+      }
+    },
+    "culturalStory": {
+      "eyebrow": "BEYOND THE ARTWORK",
+      "title": "More Than a Ceramic Tradition",
+      "description": "Discover how Chinese ceramics became part of everyday life, artistic expression, and cultural exchange across generations.",
+      "stories": {
+        "culture": {
+          "number": "01",
+          "title": "Daily Life & Culture",
+          "description": "Ceramics have played an important role in Chinese daily life, from tea drinking and dining to traditional cultural practices."
+        },
+        "craft": {
+          "number": "02",
+          "title": "Art & Craftsmanship",
+          "description": "Generations of skilled artisans developed distinctive techniques, forms, and decorative traditions that shaped Chinese ceramic art."
+        },
+        "exchange": {
+          "number": "03",
+          "title": "Global Cultural Exchange",
+          "description": "Through historical trade and cultural connections, Chinese porcelain reached distant regions and influenced ceramic traditions around the world."
+        }
+      }
+    }
   }
 }
