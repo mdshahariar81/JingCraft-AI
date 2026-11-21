@@ -41,226 +41,195 @@ function HomePage() {
 
   return (
     <>
-      {/* =====================================================
-          1. HERO SECTION
+        
+
+            {/* =====================================================
+          HERO SECTION — HUMANIZED JINGCRAFT AI
+          Desktop: Left aligned
+          Tablet: Centered
+          Mobile: Centered
+          Responsive | Balanced | Editorial
       ====================================================== */}
-      <section className="relative isolate overflow-hidden bg-background">
-        {/* Decorative background elements */}
+
+      <section className="relative isolate min-h-[calc(100svh-68px)] w-full overflow-hidden bg-[#F5F2E9] antialiased">
+
+        {/* =====================================================
+            BACKGROUND IMAGE
+        ====================================================== */}
+        <motion.div
+          initial={{ opacity: 0, scale: 1.025 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="absolute inset-0"
+          aria-hidden="true"
+        >
+          <img
+            src="https://assets.watermelon.sh/hero-11-bg.avif"
+            alt=""
+            className="h-full w-full object-cover object-center max-md:object-[65%_center]"
+          />
+        </motion.div>
+
+        {/* =====================================================
+            BALANCED CONTINUOUS HORIZONTAL OVERLAY
+            Avoid abrupt breakpoint changes
+        ====================================================== */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -left-40 top-20 size-96 rounded-full bg-jade/5 blur-3xl"
+          className="absolute inset-0 bg-[linear-gradient(90deg,rgba(245,242,233,0.72)_0%,rgba(245,242,233,0.52)_35%,rgba(245,242,233,0.12)_70%,rgba(245,242,233,0)_100%)] max-md:bg-[linear-gradient(90deg,rgba(245,242,233,0.82)_0%,rgba(245,242,233,0.62)_55%,rgba(245,242,233,0.25)_100%)]"
         />
 
+        {/* =====================================================
+            SUBTLE VERTICAL BLENDING
+        ====================================================== */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-40 bottom-0 size-96 rounded-full bg-antique-gold/10 blur-3xl"
+          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(245,242,233,0.04)_0%,rgba(245,242,233,0)_70%,rgba(245,242,233,0.08)_100%)]"
         />
 
-        <div className="relative mx-auto grid min-h-[680px] max-w-[1440px] items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:px-12 lg:py-24">
+        {/* =====================================================
+            MAIN CONTAINER
+        ====================================================== */}
+        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-68px)] w-full max-w-[1440px] items-center px-5 py-12 sm:px-8 sm:py-16 lg:px-12">
 
-          {/* Hero text content */}
+          {/* =====================================================
+              CONTENT WRAPPER
+              Desktop: Left
+              Tablet/Mobile: Center
+          ====================================================== */}
           <motion.div
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="relative z-20 order-1 w-full max-w-2xl"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.13 },
+              },
+            }}
+            className="mx-auto flex w-full max-w-[760px] flex-col items-center text-center lg:mx-0 lg:max-w-[680px] lg:items-start lg:text-left"
           >
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-antique-gold/30 bg-white/60 px-4 py-2">
-              <Sparkles size={15} className="text-accent" />
 
-              <span className="text-[10px] font-semibold tracking-[0.22em] text-primary sm:text-xs">
+            {/* =====================================================
+                EYEBROW
+            ====================================================== */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 16 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.65 },
+                },
+              }}
+              className="mb-7 inline-flex items-center rounded-full border border-[#B69A62]/35 bg-[#F5F2E9]/50 px-4 py-2 sm:mb-8"
+            >
+              <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#193C67]/85 sm:text-xs">
                 {t('home.eyebrow')}
               </span>
-            </div>
+            </motion.div>
 
-            <h1 className="text-4xl font-semibold leading-[1.2] tracking-tight text-primary sm:text-5xl lg:text-6xl xl:text-7xl">
-              {t('home.title')}
-            </h1>
+            {/* =====================================================
+                MAIN HEADING
+            ====================================================== */}
+            <motion.h1
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.7 },
+                },
+              }}
+              className="w-full max-w-[760px] text-[clamp(2.5rem,7vw,5.35rem)] leading-[1.08] font-medium tracking-[-0.045em] text-balance text-[#193C67] sm:text-[clamp(3rem,6vw,5rem)] lg:text-[clamp(3.6rem,5vw,5.2rem)]"
+            >
+              {t('home.fftitle')}
+            </motion.h1>
 
-            <p className="mt-7 max-w-xl text-base leading-8 text-muted sm:text-lg">
+            {/* =====================================================
+                DESCRIPTION
+            ====================================================== */}
+            <motion.p
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.7 },
+                },
+              }}
+              className="mt-5 w-full max-w-[560px] text-[15px] leading-[1.8] text-pretty text-[#193C67]/80 sm:mt-6 sm:text-lg sm:leading-[1.75]"
+            >
               {t('home.description')}
-            </p>
+            </motion.p>
 
-            {/* Hero navigation actions */}
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            {/* =====================================================
+                CTA BUTTONS
+            ====================================================== */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.7 },
+                },
+              }}
+              className="mt-7 flex w-full flex-col items-center gap-3 sm:mt-9 sm:flex-row sm:justify-center lg:justify-start"
+            >
+
+              {/* EXPLORE MUSEUM */}
               <Link
                 to="/museum"
-                className="group inline-flex items-center justify-center gap-3 rounded-lg bg-[#193C67] px-7 py-4 text-sm font-medium !text-white shadow-md shadow-primary/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#244D7D]"
+                className="group inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-sm border border-[#193C67] bg-[#193C67] px-7 text-sm font-medium !text-[#F5F2E9] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#244D7D] hover:shadow-lg sm:w-auto"
               >
-                {t('home.explore')}
+                <span className="!text-[#F5F2E9]">
+                  {t('home.explore')}
+                </span>
 
                 <ArrowRight
                   size={17}
-                  className="transition-transform group-hover:translate-x-1"
+                  className="shrink-0 !text-[#F5F2E9] transition-transform duration-300 group-hover:translate-x-1"
                 />
               </Link>
 
+              {/* AI DESIGN STUDIO */}
               <Link
                 to="/design-studio"
-                className="inline-flex items-center justify-center gap-3 rounded-lg border border-primary/20 bg-white/60 px-7 py-4 text-sm font-medium text-primary transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-white"
+                className="inline-flex min-h-[54px] w-full items-center justify-center rounded-sm border border-[#193C67]/30 bg-[#F5F2E9]/65 px-7 text-sm font-medium !text-[#193C67] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#193C67] hover:bg-[#F5F2E9]/90 hover:shadow-md sm:w-auto"
               >
-                {t('home.create')}
-                <Sparkles size={17} />
+                <span className="!text-[#193C67]">
+                  {t('home.create')}
+                </span>
               </Link>
-            </div>
 
-            {/* Brand tagline */}
-            <div className="mt-12 flex items-center gap-4 border-t border-border pt-7">
-              <div className="flex size-10 items-center justify-center rounded-full bg-jade/10 text-jade">
-                <Sparkles size={19} />
-              </div>
+            </motion.div>
 
-              <p className="max-w-xs text-xs leading-6 text-muted">
+            {/* =====================================================
+                BRAND SIGNATURE
+            ====================================================== */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 15 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.7 },
+                },
+              }}
+              className="mt-9 flex w-full items-center justify-center border-t border-[#193C67]/15 pt-5 sm:mt-12 lg:justify-start"
+            >
+              <p className="text-[11px] tracking-wide text-[#193C67]/65 sm:text-xs">
                 {t('brand.tagline')}
               </p>
-            </div>
+            </motion.div>
+
           </motion.div>
 
-          {/* Porcelain-inspired hero illustration */}
-          <motion.div
-            initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.94 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            className="relative z-0 order-2 mx-auto w-full max-w-[560px]"
-          >
-            <div className="relative flex min-h-[480px] flex-col items-center justify-center gap-5 overflow-hidden rounded-[48%_48%_12px_12px] border border-antique-gold/25 bg-[#EAE5D8] px-4 py-8 sm:aspect-[4/5] sm:min-h-0 sm:gap-0 sm:px-0 sm:py-0">
-
-              {/* Decorative circles */}
-              <div
-                aria-hidden="true"
-                className="absolute size-[75%] rounded-full border border-antique-gold/30"
-              />
-
-              <div
-                aria-hidden="true"
-                className="absolute size-[58%] rounded-full border border-primary/10"
-              />
-
-              {/* Floating porcelain vase illustration */}
-              <motion.div
-                animate={
-                  prefersReducedMotion ? undefined : { y: [0, -9, 0] }
-                }
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-                className="relative z-10 w-[65%] max-w-[250px] shrink-0 sm:w-[72%] sm:max-w-[340px]"
-              >
-                <svg
-                  viewBox="0 0 360 440"
-                  className="h-auto w-full drop-shadow-2xl"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Decorative porcelain-inspired vase illustration"
-                >
-                  <defs>
-                    <linearGradient
-                      id="porcelainBody"
-                      x1="70"
-                      y1="50"
-                      x2="290"
-                      y2="400"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#FFFFFF" />
-                      <stop offset="0.5" stopColor="#E9EEF0" />
-                      <stop offset="1" stopColor="#CAD8E0" />
-                    </linearGradient>
-
-                    <linearGradient
-                      id="vaseShadow"
-                      x1="100"
-                      y1="200"
-                      x2="270"
-                      y2="300"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#193C67" stopOpacity="0.04" />
-                      <stop offset="1" stopColor="#193C67" stopOpacity="0.24" />
-                    </linearGradient>
-                  </defs>
-
-                  {/* Vase body */}
-                  <path
-                    d="M145 44 L215 44 L219 108 C220 130 238 145 252 171 C272 208 280 263 270 318 C264 356 238 380 180 384 C122 380 96 356 90 318 C80 263 88 208 108 171 C122 145 140 130 141 108 Z"
-                    fill="url(#porcelainBody)"
-                    stroke="#A8B8C3"
-                    strokeWidth="2"
-                  />
-
-                  <path
-                    d="M145 44 L215 44 L219 108 C220 130 238 145 252 171 C272 208 280 263 270 318 C264 356 238 380 180 384 C122 380 96 356 90 318 C80 263 88 208 108 171 C122 145 140 130 141 108 Z"
-                    fill="url(#vaseShadow)"
-                  />
-
-                  {/* Vase neck and rim */}
-                  <path
-                    d="M140 43 Q180 34 220 43 L217 55 Q180 62 143 55 Z"
-                    fill="#D7E2E7"
-                    stroke="#A8B8C3"
-                    strokeWidth="2"
-                  />
-
-                  <path
-                    d="M145 43 Q180 35 215 43"
-                    stroke="#193C67"
-                    strokeWidth="3"
-                  />
-
-                  {/* Traditional-inspired blue decoration */}
-                  <g
-                    stroke="#193C67"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M113 233 Q180 200 247 233" opacity="0.8" />
-                    <path d="M107 265 Q180 231 253 265" opacity="0.7" />
-
-                    <path d="M145 210 Q128 190 145 175 Q163 191 145 210Z" />
-                    <path d="M180 202 Q164 180 180 164 Q196 180 180 202Z" />
-                    <path d="M215 210 Q198 190 215 175 Q232 191 215 210Z" />
-
-                    <path d="M180 214 C158 236 150 248 180 258 C210 248 202 236 180 214Z" />
-                    <path d="M180 214 L180 260" />
-
-                    <path d="M130 292 Q180 320 230 292" opacity="0.8" />
-                    <path d="M143 321 Q180 341 217 321" opacity="0.7" />
-                  </g>
-
-                  {/* Fine ornamental details */}
-                  <g fill="#B69A62">
-                    <circle cx="180" cy="277" r="4" />
-                    <circle cx="151" cy="275" r="2.5" />
-                    <circle cx="209" cy="275" r="2.5" />
-                  </g>
-
-                  <path
-                    d="M120 352 Q180 369 240 352"
-                    stroke="#193C67"
-                    strokeWidth="2"
-                    opacity="0.45"
-                  />
-                </svg>
-              </motion.div>
-
-              {/* Illustration caption */}
-              <div className="relative z-20 w-full rounded-xl border border-white/80 bg-white/95 p-4 shadow-lg sm:absolute sm:bottom-9 sm:left-8 sm:right-8 sm:w-auto">
-                <p className="text-[10px] font-semibold tracking-[0.2em] text-accent">
-                  {t('home.visualLabel')}
-                </p>
-
-                <p className="mt-2 text-sm font-medium text-primary">
-                  {t('home.visualCaption')}
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </div>
+
       </section>
+
 
       {/* =====================================================
           2. FEATURED CHINESE CERAMIC HERITAGE
