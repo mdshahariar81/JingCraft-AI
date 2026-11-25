@@ -1,8 +1,9 @@
 import MuseumHero from './MuseumHero'
-import SymbolsMotifs from './SymbolsMotifs'
 import CuratedCollections from './CuratedCollections'
 import JourneyThroughTime from './JourneyThroughTime'
 import ArtistryTechniques from './ArtistryTechniques'
+import SymbolsMotifs from './SymbolsMotifs'
+import FeaturedArtifacts from './FeaturedArtifacts'
 
 export default function MuseumPage() {
   return (
@@ -11,7 +12,8 @@ export default function MuseumPage() {
       <CuratedCollections />
       <JourneyThroughTime />
       <ArtistryTechniques />
-          <SymbolsMotifs />
+      <SymbolsMotifs />
+      <FeaturedArtifacts />
     </main>
   )
 }
