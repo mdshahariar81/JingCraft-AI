@@ -143,7 +143,7 @@ function HomePage() {
               }}
               className="w-full max-w-[760px] text-[clamp(2.5rem,7vw,5.35rem)] leading-[1.08] font-medium tracking-[-0.045em] text-balance text-[#193C67] sm:text-[clamp(3rem,6vw,5rem)] lg:text-[clamp(3.6rem,5vw,5.2rem)]"
             >
-              {t('home.fftitle')}
+              {t('home.title')}
             </motion.h1>
 
             {/* =====================================================
